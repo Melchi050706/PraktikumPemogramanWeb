@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -14,9 +17,8 @@
         <h1>🌌 Honkai Star Rail Character Management System</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Beranda</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register.html">Register</a></li>
+                <li><a href="index.php">Beranda</a></li>
+                <li><a href="login/login.php">Login</a></li>
                 <li><a href="#fitur">Fitur</a></li>
             </ul>
         </nav>
@@ -60,6 +62,6 @@
             </a>
         </p>
     </footer>
-<script src="script.js"></script>
+<script src="apapun.js"></script> 
 </body>
 </html>

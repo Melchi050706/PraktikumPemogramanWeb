@@ -38,10 +38,3 @@ karakterHSR.forEach(char => {
   listContainer.appendChild(card);
 });
 
-// 3. Event Listener: klik menu navigasi
-document.querySelectorAll("nav a").forEach(link => {
-  link.addEventListener("click", e => {
-    e.preventDefault();
-    alert(`Navigasi ke: ${e.target.textContent}`);
-  });
-});
