@@ -1,0 +1,195 @@
+/* Variabel Tema */
+:root {
+    --primary-color: #1a1a40;
+    --secondary-color: #2a2a55;
+    --accent-color: #ffd700;
+    --bg-dark: #0a0a23;
+    --text-light: #ffffff;
+    --radius: 10px;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: var(--primary-color);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+}
+
+/* Layout utama */
+.dashboard-container {
+    display: flex;
+    min-height: 80vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: var(--secondary-color);
+    color: var(--text-light);
+    padding: 20px;
+    border-right: 2px solid var(--accent-color);
+}
+
+.sidebar h2 {
+    text-align: center;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 12px 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: var(--accent-color);
+    color: #000;
+}
+
+/* Tombol Logout */
+.sidebar a.logout {
+    background: #c0392b;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sidebar a.logout:hover {
+    background: #e74c3c;
+}
+
+/* Konten Utama */
+.content {
+    flex: 1;
+    padding: 30px;
+    background: var(--bg-dark);
+}
+
+.content h2 {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+/* Tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--secondary-color);
+    color: var(--text-light);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+}
+
+thead {
+    background: var(--primary-color);
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    color: var(--accent-color);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+tr:hover {
+    background: rgba(255, 215, 0, 0.1);
+    transition: 0.2s;
+}
+
+/* Footer */
+footer {
+    background: var(--primary-color);
+    text-align: center;
+    padding: 15px;
+    color: var(--text-light);
+    border-top: 2px solid var(--accent-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    tr {
+        margin-bottom: 15px;
+    }
+
+    td {
+        padding: 10px;
+        text-align: right;
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        color: var(--accent-color);
+        text-align: left;
+    }
+}

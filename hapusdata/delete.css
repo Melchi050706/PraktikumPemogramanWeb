@@ -1,0 +1,119 @@
+/* ======== Gaya dasar ======== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #0b0b0d;
+    color: #fff;
+}
+
+/* Header */
+header {
+    background-color: #222;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 3px solid #ffcc00;
+}
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    display: flex;
+    min-height: 90vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background-color: #111;
+    padding: 20px;
+}
+.sidebar h2 {
+    text-align: center;
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: #ffcc00;
+    color: #000;
+}
+.sidebar .logout {
+    color: #ff4444;
+}
+
+/* Konten utama */
+.content {
+    flex: 1;
+    padding: 30px;
+    background-color: #1c1c1e;
+}
+.content h2 {
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+/* Tabel data */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #2a2a2d;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.2);
+}
+thead {
+    background-color: #ffcc00;
+    color: #000;
+}
+thead th {
+    padding: 12px;
+    text-align: left;
+}
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+}
+tbody tr:hover {
+    background-color: #333;
+}
+
+/* Tombol hapus */
+.delete-btn {
+    display: inline-block;
+    background-color: #ff4444;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+.delete-btn:hover {
+    background-color: #ff0000;
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    text-align: center;
+    padding: 10px;
+    border-top: 2px solid #ffcc00;
+    font-size: 14px;
+}

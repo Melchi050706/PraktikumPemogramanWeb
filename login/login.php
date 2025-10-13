@@ -3,7 +3,7 @@ session_start();
 
 // Jika user sudah login → langsung ke dashboard
 if (isset($_SESSION['username'])) {
-    header("Location: ../dashboard.php");
+    header("Location: ../dashboard/dashboard.php");
     exit;
 }
 
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($username == $valid_user && $password == $valid_pass) {
         $_SESSION['username'] = $username;
-        header("Location: ../dashboard.php");
+        header("Location: ../dashboard/dashboard.php");
         exit;
     } else {
         $error = "Username atau password salah!";
